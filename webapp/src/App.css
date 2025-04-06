@@ -255,3 +255,46 @@ body {
     overflow-x: hidden; /* hides any accidental horizontal scroll */
   }
   
+  .cert-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* space between cards */
+    margin-top: 30px;
+  }
+  
+  .cert-card {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 0 12px rgba(0, 188, 212, 0.15);
+    transition: transform 0.3s;
+  }
+  
+  .cert-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .cert-img {
+    width: 160px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+  }
+  
+  .cert-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .cert-card .btn {
+    font-size: 0.9rem;
+    color: #00bcd4;
+    text-decoration: underline;
+    margin-top: 5px;
+    display: inline-block;
+  }
+  

@@ -3,6 +3,7 @@ import profilePic from './profile-pic.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReactTypingEffect from 'react-typing-effect';
+import Certifications from './Certifications';
 
 function Navbar() {
   return (
@@ -143,24 +144,7 @@ function Hero() {
       </section>
     );
   }
-  
-
-  function Certifications() {
-    return (
-      <section id="certifications" className="section certifications" data-aos="fade-up">
-        <h2>Certifications</h2>
-        <ul>
-          <li data-aos="fade-right" data-aos-delay="100">
-            AWS Certified Developer – Amazon Web Services
-          </li>
-          <li data-aos="fade-right" data-aos-delay="200">
-            AWS Certified Solutions Architect – Amazon Web Services
-          </li>
-        </ul>
-      </section>
-    );
-  }
-  
+    
 
   function Contact() {
     const handleSubmit = (e) => {
