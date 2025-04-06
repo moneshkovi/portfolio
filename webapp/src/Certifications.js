@@ -1,6 +1,22 @@
 // Certifications.js
 import React from 'react';
 
+const techSkills = [
+  { name: "Python", level: 90 },
+  { name: "JavaScript", level: 85 },
+  { name: "AWS", level: 80 },
+  { name: "MySQL", level: 75 },
+  { name: "ReactJS", level: 80 },
+  { name: "Docker", level: 70 }
+];
+
+const softSkills = [
+  { name: "Teamwork", percent: 90 },
+  { name: "Communication", percent: 85 },
+  { name: "Problem Solving", percent: 88 },
+  { name: "Adaptability", percent: 82 }
+];
+
 const Certifications = () => {
   // Certification data with local image paths and Credly URLs
   const certifications = [
@@ -53,6 +69,46 @@ const Certifications = () => {
             </a>
           </div>
         ))}
+      </div>
+
+      {/* Skills Section */}
+      <div className="skills-container">
+        <div className="tech-skills">
+          <h2>Technical Skills</h2>
+          {techSkills.map(skill => (
+            <div key={skill.name} className="skill-bar">
+              <span>{skill.name}</span>
+              <div className="progress-bar">
+                <div className="fill" style={{ width: `${skill.level}%` }}></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="soft-skills">
+          <h2>Professional Skills</h2>
+          <div className="soft-skills-grid">
+            {softSkills.map(skill => (
+              <div key={skill.name} className="circle-skill">
+                <svg viewBox="0 0 36 36" className="circular-chart">
+                  <path className="circle-bg"
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <path className="circle"
+                    strokeDasharray={`${skill.percent}, 100`}
+                    d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                  />
+                  <text x="18" y="20.35" className="percentage">{skill.percent}%</text>
+                </svg>
+                <span className="skill-name">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
