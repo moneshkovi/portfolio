@@ -1,14 +1,14 @@
 // Certifications.js
 import React from 'react';
+import { FaAws, FaDatabase, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 const techSkills = [
-  { name: "Python", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "AWS", level: 80 },
-  { name: "MySQL", level: 75 },
-  { name: "ReactJS", level: 80 },
-  { name: "Docker", level: 70 }
+  { name: "Languages", items: ["Python", "JavaScript", "HTML", "CSS", "Bash"] },
+  { name: "Technologies", items: ["AWS (EC2, S3, EBS, VPC, CloudTrail, Lambda, API Gateway)", "Linux", "Docker", "Git", "Cloudflare", "Elastic Stack", "Scikit-learn"] },
+  { name: "Databases", items: ["MySQL", "Redis", "InfluxDB", "DynamoDB"] },
+  { name: "Frameworks", items: ["ReactJS"] }
 ];
+
 
 const softSkills = [
   { name: "Teamwork", percent: 90 },
@@ -37,6 +37,7 @@ const Certifications = () => {
   ];
 
   return (
+    <>
     <section id="certifications" className="section certifications" data-aos="fade-up">
       <h2>Certifications</h2>
       <div className="cert-cards">
@@ -75,16 +76,17 @@ const Certifications = () => {
       <div className="skills-container">
         <div className="tech-skills">
           <h2>Technical Skills</h2>
-          {techSkills.map(skill => (
-            <div key={skill.name} className="skill-bar">
-              <span>{skill.name}</span>
-              <div className="progress-bar">
-                <div className="fill" style={{ width: `${skill.level}%` }}></div>
-              </div>
-            </div>
-          ))}
+          {techSkills.map(group => (
+          <div key={group.name} className="skill-group">
+            <h4>{group.name}</h4>
+            <ul className="skill-list">
+              {group.items.map(skill => (
+                <li key={skill} className="skill-item">{skill}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
         </div>
-
         <div className="soft-skills">
           <h2>Professional Skills</h2>
           <div className="soft-skills-grid">
@@ -111,6 +113,48 @@ const Certifications = () => {
         </div>
       </div>
     </section>
+    
+    <section className="section process-phases" data-aos="fade-up">
+      <h2>Why am I Different?</h2>
+      <div className="phases-grid">
+        
+        <div className="phase-card" data-aos="fade-up" data-aos-delay="100">
+          <div className="phase-content">
+            <div className="phase-title">Phase 1</div>
+            <div className="phase-details">
+              <h3>Learn Fast, Think Deep</h3>
+              <p>I go beyond surface-level problem-solving. I break down complex challenges, ask the right questions, and quickly grasp new tools or technologies — whether it's AI-assisted coding or cloud-first thinking.</p>
+            </div>
+            <div className="color-drop"></div>
+          </div>
+        </div>
+
+        <div className="phase-card" data-aos="fade-up" data-aos-delay="200">
+          <div className="phase-content">
+            <div className="phase-title">Phase 2</div>
+            <div className="phase-details">
+              <h3>Adapt With Intention</h3>
+              <p>I use tools like Cursor, GitHub Copilot, and AWS-native services to build efficiently — not just fast. I adapt quickly, but every tech choice I make serves a purpose, not just a trend.</p>
+            </div>
+            <div className="color-drop"></div>
+          </div>
+        </div>
+
+        <div className="phase-card" data-aos="fade-up" data-aos-delay="300">
+          <div className="phase-content">
+            <div className="phase-title">Phase 3</div>
+            <div className="phase-details">
+              <h3>Deliver Like an Owner</h3>
+              <p>I take full responsibility for what I build — from planning and dev to testing and delivery. I don’t stop at “it works,” I aim for “it works, scales, and delivers impact.”</p>
+            </div>
+            <div className="color-drop"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    </>
   );
 };
 
