@@ -1,0 +1,135 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, 
+    top=1.0cm, 
+    bottom=1.0cm, 
+    left=1.5cm, 
+    right=1.5cm, 
+    footskip=1cm
+]{geometry}
+\usepackage{titlesec} 
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle={Monesh Kovi's Resume},
+    pdfauthor={Monesh Kovi},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=violet
+}
+\usepackage{lastpage}
+\usepackage{paracol}
+
+% Formatting settings:
+\raggedright
+\pagestyle{empty} 
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt} 
+\setlength{\columnsep}{0.15cm} 
+\pagenumbering{gobble}
+
+% Section title format with underline color
+\titleformat{\section}{\color{violet}\bfseries\large}{}{0pt}{}[\vspace{1pt}\textcolor{violet}{\titlerule}]
+\titlespacing{\section}{0pt}{0.1cm}{0.05cm}
+
+\renewcommand\labelitemi{\faCheckCircle} 
+
+% Custom colors
+\definecolor{myBlue}{RGB}{43, 87, 151}
+
+\begin{document}
+
+% Name and Contact Information
+\noindent
+\begin{tabularx}{\textwidth}{X r}
+    \textbf{\fontsize{22pt}{22pt}\selectfont \textcolor{myBlue}{Monesh Kovi}} & 
+    \begin{tabular}{r}
+        \href{mailto:monesh.kovi1@gmail.com}{\faEnvelope \ monesh.kovi1@gmail.com} \\
+        \href{https://linkedin.com/in/monesh-kovi}{\faLinkedin \ monesh-kovi} \\
+        \href{https://github.com/moneshkovi}{\faGithub \ moneshkovi} \\
+        \faPhone \ 314-896-0887 \\
+    \end{tabular}
+\end{tabularx}
+
+\vspace{0.3cm}
+
+% Education Section
+\section{Education}
+\begin{tabularx}{\textwidth}{X r}
+    \textbf{Saint Louis University} -- Master of Information Systems & Aug 2023 -- Present \\
+    GPA: 3.95 & \\
+    \textbf{Presidency University} -- Bachelor of Information Science & Aug 2019 -- Apr 2023 \\
+    GPA: 3.4 & \\
+\end{tabularx}
+
+\vspace{0.2cm}
+
+% Work Experience Section
+\section{Work Experience}
+\textbf{\textcolor{myBlue}{Cloud Architect Intern}} -- Alphathena, Chicago, IL \hfill Jan 2025 -- Ongoing
+\begin{itemize}[leftmargin=*]
+    \item Centralized AWS service logs and built an OpenSearch dashboard to streamline log monitoring and reduce issue triage time by 40\%.
+    \item Built a scalable ETL framework using Python and Apache Airflow to automate daily data imports, reducing human intervention by 90\%.
+    \item Designed and implemented a log archival pipeline to move PROD API and Flask logs to S3 with automated Glacier transition after 15 days, optimizing storage costs and ensuring audit readiness.
+
+\end{itemize}
+
+\textbf{\textcolor{myBlue}{Cloud Architect Intern}} -- Alphathena, Chicago, IL \hfill May 2024 -- Aug 2024
+\begin{itemize}[leftmargin=*]
+    \item Optimized website hosting with AWS Elastic Beanstalk and AWS Amplify, ensuring high availability and scalability.
+    \item Developed \& Implemented the security of cloud instances by implementing an automated monthly rotation of PEM files, enhancing instance protection and access control.
+    \item Developed custom AES encryption for S3 objects, ensuring robust data security and compliance with industry standards.
+\end{itemize}
+
+\textbf{\textcolor{myBlue}{Software Engineer Intern}} -- Wrecked Esports, Bangalore, India \hfill Apr 2023 -- Jul 2023
+\begin{itemize}[leftmargin=*]
+    \item Designed and deployed an internal reporting dashboard using advanced MySQL queries to enhance decision-making
+    \item Enhanced invoice accuracy and query responsiveness by 44\% while cutting maintenance needs by 50% using AI.
+    \item Developed serverless applications using AWS Lambda and API Gateway for improved cost efficiency and scalability.
+\end{itemize}
+
+
+\textbf{\textcolor{myBlue}{Software Engineer Intern}} -- Wrecked Tech Private Limited, Bangalore, India \hfill Jan 2023 -- Mar 2023
+\begin{itemize}[leftmargin=*]
+    \item Automated testing processes with Bash scripts, improving system reliability and operational efficiency.
+    \item Developed a feed refresh algorithm that boosted processing speed by 150\% and increased content uniqueness by 80\%.
+    \item Performed advanced data analysis with Pandas and NumPy, enabling data-driven decision-making and identifying key metrics.
+\end{itemize}
+
+\vspace{0.2cm}
+
+% Projects Section
+\section{Projects}
+\textbf{AI-Powered Content Generation and Management Platform}, Self-Developed — \textit{AWS, OpenAI, Elastic Beanstalk, S3, Secrets Manager}
+
+Developed and deployed an AI-powered platform using AWS Elastic Beanstalk, integrated OpenAI's GPT-4 API for automated content generation, and utilized Amazon S3 for secure, scalable storage, reducing manual effort by 70\%.
+
+\vspace{0.2cm}
+
+% Core Skills Section
+\section{Core Skills}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X}
+\textbf{Languages:} Python, JavaScript, HTML, CSS, Bash \\
+\textbf{Technologies:} AWS (EC2, S3, EBS, VPC, CloudTrail, Lambda, API Gateway, Glue, Quicksight), Linux, ETL, Docker, Git, Cloudflare, Elastic Stack, Scikit-learn, Pentaho, Apache Airflow\\
+\textbf{Databases:} MySQL, Redis, InfluxDB, DynamoDB \\
+\textbf{Frameworks:} ReactJS \\
+\end{tabularx}
+
+\vspace{0.2cm}
+
+
+
+% Certifications Section
+\section{Certifications}
+\textbf{\href{https://cp.certmetrics.com/amazon/en/public/verify/credential/dc7c20379cf94f2699a4d430c31ac969}{AWS Certified Developer}} -- Amazon Web Services \hfill Jul 2024 \\
+\textbf{\href{https://cp.certmetrics.com/amazon/en/public/verify/credential/7ec7fce4db1f4b1bab3b6f8caa3f509b}{AWS Certified Solution Architect}} -- Amazon Web Services \hfill Jul 2024
+
+\end{document}
