@@ -1,6 +1,5 @@
 // Certifications.js
 import React from 'react';
-import { FaAws, FaDatabase, FaCode, FaLaptopCode } from 'react-icons/fa';
 
 const techSkills = [
   { name: "Languages", items: ["Python", "JavaScript", "HTML", "CSS", "Bash"] },

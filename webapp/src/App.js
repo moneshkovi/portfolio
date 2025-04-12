@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import ReactTypingEffect from 'react-typing-effect';
 import Certifications from './Certifications';
+import Projects from './Projects';
 
 function Navbar() {
   return (
@@ -93,31 +94,6 @@ function Hero() {
           <span className="badge">AWS Certified</span>
           <span className="badge">GPT-4 Builder</span>
           <span className="badge">Pythonic Thinker</span>
-        </div>
-      </section>
-    );
-  }
-  
-
-  function Projects() {
-    return (
-      <section id="projects" className="section projects" data-aos="fade-up">
-        <h2>Projects</h2>
-        <div className="project-cards">
-          <div className="project-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>AI-Powered Content Platform</h3>
-            <p>
-              A platform that integrates AWS services and GPT-4 API for automated content generation.
-            </p>
-            <a href="#" className="btn">View Project</a>
-          </div>
-          <div className="project-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Emotion Recognition (EmoBERTa)</h3>
-            <p>
-              An advanced NLP model using the Roberta architecture to detect and analyze emotions.
-            </p>
-            <a href="#" className="btn">View Project</a>
-          </div>
         </div>
       </section>
     );
