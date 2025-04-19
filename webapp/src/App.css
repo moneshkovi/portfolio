@@ -98,9 +98,20 @@ body {
     transition: background 0.3s;
   }
   
-  .hero-cta .btn:hover {
-    background: #008ba3;
-  }
+.hero-cta .btn:hover {
+  background: #008ba3;
+}
+
+.hero-cta .btn-highlight {
+  background: linear-gradient(135deg, #7b1fa2, #512da8);
+  color: white;
+  box-shadow: 0 3px 10px rgba(121, 31, 162, 0.3);
+}
+
+.hero-cta .btn-highlight:hover {
+  background: linear-gradient(135deg, #9c27b0, #673ab7);
+  box-shadow: 0 5px 15px rgba(121, 31, 162, 0.5);
+}
   
   /* Section styles */
   .section {
