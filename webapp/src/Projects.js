@@ -131,33 +131,6 @@ function Projects() {
               </a>
             </div>
           </div>
-
-          {/* Duplicate cards to create infinite scroll effect */}
-          <div className="project-card">
-            <h3>AI Agents for Medical Diagnosis</h3>
-            <p>
-              A sophisticated medical diagnostic system powered by AI agents that analyzes patient symptoms 
-              and medical records to provide diagnostic recommendations. The system leverages NLP and ML to interpret 
-              medical data and assist healthcare professionals.
-            </p>
-            <div className="project-skills">
-              <span className="skill-tag">Python</span>
-              <span className="skill-tag">AI Agents</span>
-              <span className="skill-tag">NLP</span>
-              <span className="skill-tag">Machine Learning</span>
-              <span className="skill-tag">Healthcare</span>
-            </div>
-            <div className="project-links">
-              <a 
-                href="https://github.com/moneshkovi/AI-Agents-for-Medical-Diagnosis" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="github-btn"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -14,11 +14,6 @@ const About = () => {
       <p>
       I'm currently looking for a full-time role in cloud, DevOps, or data engineering where I can keep learning, build meaningful tools, and contribute to a team that values clear thinking and clean code.
       </p>
-      <div className="about-badges">
-        <span className="badge">AWS Certified</span>
-        <span className="badge">GPT-4 Builder</span>
-        <span className="badge">Pythonic Thinker</span>
-      </div>
     </section>
   );
 };
